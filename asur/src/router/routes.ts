@@ -1,9 +1,10 @@
 import type { RouteRecordRaw } from 'vue-router';
+import layout from 'layouts/MainLayout.vue'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: layout,
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
   },
 

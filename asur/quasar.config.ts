@@ -16,7 +16,7 @@ export default defineConfig((/* ctx */) => {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: [
-      'app.scss'
+      'Main.scss'
     ],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
@@ -79,7 +79,12 @@ export default defineConfig((/* ctx */) => {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#devserver
     devServer: {
       // https: true,
-      open: true // opens browser window automatically
+      // open: true // opens browser window automatically
+      open: {
+      app: {
+        name: 'chrome', // ← 改成你想開啟的瀏覽器
+      }
+    }
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
