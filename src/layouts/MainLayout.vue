@@ -6,7 +6,7 @@
         <div class="headerLeft" @click="GoToHome">
           <img v-if="!isMobile" alt="asurIcon" src="asur/asurTitle.jpg" />
           <img v-else alt="asurIcon2" src="asur/asurTitle.jpg" />
-        </div>
+</div>
         <div class="headerRight">
           <router-link to="/" class="changPage"> 服務團隊 </router-link>
           <q-btn title="切換語言" aria-label="切換語言" label="切換語言"> </q-btn>
