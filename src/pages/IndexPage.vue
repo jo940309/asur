@@ -16,7 +16,8 @@
       <a
         v-for="item in navItems"
         :key="item.id"
-        :href="'#' + item.id"
+        href="#"
+        @click.prevent="scrollTo(item.id)"
         :class="[
           'nav-button',
           { active: activeSection === item.id, large: item.id === activeSection },
@@ -60,4 +61,18 @@ onMounted(() => {
     if (el) observer.observe(el);
   });
 });
+
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    // 僅在未完全進入視口時才滾動
+    const rect = el.getBoundingClientRect();
+    const isFullyVisible =
+      rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+    if (!isFullyVisible) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
 </script>

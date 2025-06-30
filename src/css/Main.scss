@@ -109,7 +109,8 @@ h4 {
 }
 
 .nav-button {
-  background: #ddd;
+  background: rgba(221, 221, 221, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   padding: 15px 10px;
   text-align: center;
@@ -130,21 +131,27 @@ h4 {
 
 .nav-button:hover {
   background: #bbb;
+  transform: scale(1.1);
 }
 
 .nav-button.active {
-  background: #004b97;
-  color: white;
+  background: #5182bd;
+  color: #f5efe7;
   transform: scale(1.1);
+}
+
+.nav-button.active:hover {
+  background: #436da1;
+  transform: scale(1.2);
 }
 
 ////刪
 .section {
   height: 100vh;
   width: 100%;
-  padding: 20px;
+  // padding: 20px;
   // scroll-margin-top: 20px;
-  // border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; ////////////////////
   font-size: 15px;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="brands" class="section">
-    <h1>經銷品牌</h1>
+    <h4>經銷品牌</h4>
   </div>
 </template>
 <script setup lang="ts"></script>
