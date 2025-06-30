@@ -1,10 +1,16 @@
 <template>
+  <div class="top-logo justify-center">
+    <img src="../assets/asur/asurTitle.jpg" alt="ASUR" class="logo" />
+  </div>
+
   <div>
-    <div id="company" class="section">公司簡介內容</div>
-    <div id="services" class="section">服務項目內容</div>
-    <div id="brands" class="section">經銷品牌內容</div>
-    <div id="projects" class="section">工程案例內容</div>
-    <div id="contact" class="section">聯絡我們內容</div>
+    <q-page-container>
+      <CompanySection />
+      <ServicesSection />
+      <BrandsSection />
+      <ProjectsSection />
+      <ContactSection />
+    </q-page-container>
 
     <div class="side-nav">
       <a
@@ -26,15 +32,14 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import BackToTopButton from 'components/BackToTopButton.vue';
+import { navItems } from '../config/nav';
 
-const navItems = [
-  { id: 'company', label: '公司簡介' },
-  { id: 'services', label: '服務項目' },
-  { id: 'brands', label: '經銷品牌' },
-  { id: 'projects', label: '工程案例' },
-  { id: 'contact', label: '聯絡我們' },
-];
+import CompanySection from 'components/CompanySection.vue';
+import ServicesSection from 'components/ServicesSection.vue';
+import BrandsSection from 'components/BrandsSection.vue';
+import ProjectsSection from 'components/ProjectsSection.vue';
+import ContactSection from 'components/ContactSection.vue';
+import BackToTopButton from 'components/BackToTopButton.vue';
 
 const activeSection = ref('company');
 
