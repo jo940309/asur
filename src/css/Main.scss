@@ -1,77 +1,3 @@
-// .asurHeader {
-//   display: flex;
-//   justify-content: space-between;
-//   background-color: #3e5879;
-//   z-index: 1000;
-//   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-//   :link,
-//   :active,
-//   :visited {
-//     color: white;
-//   }
-
-//   .headerLeft {
-//     display: flex;
-//     align-items: center;
-//     transition: opacity 0.2s ease;
-
-//     &:hover {
-//       cursor: pointer;
-//       opacity: 0.8;
-//     }
-
-//     img {
-//       height: 56px;
-//       padding: 10px;
-//     }
-//   }
-
-//   .headerRight {
-//     display: flex;
-//     padding: 5px;
-//     justify-content: flex-end;
-//     align-items: center;
-//     gap: 4px;
-
-//     .selected-button {
-//       background-color: white;
-//       color: black;
-//     }
-
-//     button {
-//       box-shadow: none;
-//       padding: 10px;
-//       border-radius: 4px;
-//       transition: background-color 0.2s ease;
-
-//       &:hover {
-//         background-color: rgba(255, 255, 255, 0.1);
-//       }
-//     }
-
-//     a {
-//       padding: 10px;
-//     }
-
-//     p {
-//       margin: 0;
-//       font-size: xx-large;
-//       align-content: center;
-//     }
-//   }
-
-//   .changPage {
-//     text-decoration: none;
-//     cursor: pointer;
-//     transition: color 0.3s;
-//   }
-
-//   .changPage:hover {
-//     color: rgb(170, 186, 222);
-//   }
-// }
-
 html {
   scroll-behavior: smooth;
 }
@@ -80,14 +6,9 @@ h4 {
   font-weight: 500;
 }
 
+// Main layout styles
 .top-logo {
-  // position: fixed;
   display: flex;
-  // text-align: center;
-  // align-items: center;
-  // justify-content: center;
-  // top: 20px;
-  // left: 20px;
   z-index: 1000;
 }
 
@@ -109,24 +30,29 @@ h4 {
 }
 
 .nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
   background: rgba(221, 221, 221, 0.6);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   padding: 15px 10px;
-  text-align: center;
   font-size: 12px;
   text-decoration: none;
-  color: black;
+  color: #0d1119;
   transition:
     background 0.3s,
     transform 0.2s;
   width: 70px;
+  height: 70px;
 }
 
 .nav-button.large {
   font-size: 16px;
   font-weight: bold;
   width: 100px;
+  height: 100px;
 }
 
 .nav-button:hover {
@@ -145,16 +71,64 @@ h4 {
   transform: scale(1.2);
 }
 
-////刪
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   // padding: 20px;
   // scroll-margin-top: 20px;
-  border-bottom: 1px solid #ccc; ////////////////////
+  // border-bottom: 1px solid #ccc; ////////////////////
   font-size: 15px;
 }
 
+.titleText {
+  position: relative;
+  z-index: 2;
+  margin-top: 70px;
+  top: 20px;
+}
+
+// CompanySection
+.company-section {
+  // display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e5879;
+  color: #f5efe7;
+  padding-bottom: 80px;
+
+  p {
+    line-height: 2.5;
+  }
+}
+
+.wave-image {
+  width: 100%;
+  height: 400px;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.bigASUR {
+  font-size: 100px;
+  font-weight: 800;
+  color: #f5efe73a;
+
+  position: absolute;
+  z-index: 1;
+}
+
+// .titleText {
+//   position: relative;
+//   z-index: 2;
+//   margin-top: 70px;
+//   top: 20px;
+// }
+
+// ContactSection
 .contact-section {
   display: flex;
   text-align: center;
@@ -166,4 +140,19 @@ h4 {
 
 .contactInfoTitle {
   text-align: end;
+}
+
+.contactInfo {
+  line-height: 40px;
+}
+
+.bigCONTACT {
+  font-size: 100px;
+  font-weight: 800;
+  color: #f5efe73a;
+
+  position: absolute;
+  z-index: 1;
+  // right: 20%;
+  transform: translate(-40%, 0);
 }

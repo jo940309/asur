@@ -1,6 +1,8 @@
 <template>
   <div id="services" class="section">
-    <h4>服務項目</h4>
+    <h4>{{ getTitleById('services') }}</h4>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { getTitleById } from '../util/title';
+</script>
