@@ -128,6 +128,66 @@ svg {
 //   top: 20px;
 // }
 
+// ServicesSection
+.services-section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5efe7;
+  color: #3e5879;
+}
+
+.bigSERVICES {
+  font-size: 100px;
+  font-weight: 800;
+  color: #3e587934;
+
+  position: absolute;
+  z-index: 1;
+  transform: translate(20%, 0);
+}
+
+// BrandsSection
+.brands-section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e5879;
+  color: #f5efe7;
+}
+
+.bigBRANDS {
+  font-size: 100px;
+  font-weight: 800;
+  color: #f5efe73a;
+
+  position: absolute;
+  z-index: 1;
+  transform: translate(20%, 0);
+}
+
+// ProjectsSection
+.projects-section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5efe7;
+  color: #3e5879;
+}
+
+.bigPROJECTS {
+  font-size: 100px;
+  font-weight: 800;
+  color: #3e587934;
+
+  position: absolute;
+  z-index: 1;
+  transform: translate(20%, 0);
+}
+
 // ContactSection
 .contact-section {
   display: flex;

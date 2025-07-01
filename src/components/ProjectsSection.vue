@@ -1,6 +1,7 @@
 <template>
-  <div id="projects" class="section">
-    <h4>{{ getTitleById('projects') }}</h4>
+  <div id="projects" class="section projects-section">
+    <a class="bigPROJECTS">PROJECTS</a>
+    <h4 class="titleText">{{ getTitleById('projects') }}</h4>
   </div>
 </template>
 <script setup lang="ts">
