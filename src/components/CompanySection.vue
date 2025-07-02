@@ -2,7 +2,7 @@
   <div id="company" class="section company-section">
     <div class="row justify-center">
       <div class="col-12">
-        <div class="wave-image">
+        <div class="wave-image-div">
           <svg viewBox="0 0 1 1" preserveAspectRatio="none">
             <defs>
               <clipPath id="waveClip" clipPathUnits="objectBoundingBox">
@@ -24,14 +24,42 @@
               width="1"
               height="1"
               preserveAspectRatio="xMidYMid slice"
-              xlink:href="../assets/testImg/img1.jpg"
+              xlink:href="../assets/asur/indexASUR.jpg"
               clip-path="url(#waveClip)"
+              class="wave-image"
+            />
+          </svg>
+          <svg viewBox="0 0 1 1" preserveAspectRatio="none" class="wave-bottom-svg">
+            <path
+              d="
+              M0,0
+              H1
+              V0.87
+              C0.8,1.1 0.66,0.75 0.5,0.9
+              C0.33,1 0.16,0.75 0,0.85
+              Z
+            "
+              fill="#F5EFE7"
+              class="wave-image"
             />
           </svg>
         </div>
+        <!-- <svg viewBox="0 0 1 1" preserveAspectRatio="none" class="wave-bottom-svg">
+          <path
+            d="
+              M0,0
+              H1
+              V0.87
+              C0.8,1.1 0.66,0.75 0.5,0.9
+              C0.33,1 0.16,0.75 0,0.85
+              Z
+            "
+            fill="#F5EFE7"
+          />
+        </svg> -->
       </div>
 
-      <div class="col-12 position-relative">
+      <div class="col-12">
         <a class="bigASUR">ASUR</a>
         <h4 class="titleText">{{ getTitleById('company') }}</h4>
       </div>
