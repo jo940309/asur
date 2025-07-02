@@ -44,19 +44,6 @@
             />
           </svg>
         </div>
-        <!-- <svg viewBox="0 0 1 1" preserveAspectRatio="none" class="wave-bottom-svg">
-          <path
-            d="
-              M0,0
-              H1
-              V0.87
-              C0.8,1.1 0.66,0.75 0.5,0.9
-              C0.33,1 0.16,0.75 0,0.85
-              Z
-            "
-            fill="#F5EFE7"
-          />
-        </svg> -->
       </div>
 
       <div class="col-12">
