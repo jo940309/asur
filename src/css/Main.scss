@@ -189,6 +189,7 @@ svg {
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding: 80px 150px 110px 100px;
   background-color: #3e5879;
   color: #f5efe7;
 }
@@ -200,8 +201,96 @@ svg {
 
   position: absolute;
   z-index: 1;
-  transform: translate(20%, 0);
+  transform: translate(-10%, 0);
 }
+
+.brand-item {
+  padding: 20px;
+}
+
+.brand-card {
+  padding: 10px;
+  justify-content: center;
+  // background-color: transparent;
+  // box-shadow: none;
+  background-color: #f5efe769;
+  height: 200px; //////////////////
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+
+.brand-card:hover {
+  background-color: #f5efe7a0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.brand-image {
+  transform: translate(0, -10%);
+}
+
+.brand-name {
+  position: absolute;
+  align-self: center;
+  bottom: 10px;
+}
+
+.brand-link {
+  text-decoration: none; /* 移除底線 */
+  color: inherit; /* 使用原本顏色 */
+  display: inline-block; /* 讓它可以包住卡片 */
+}
+
+// .brand-item {
+//   padding: 20px;
+// }
+
+// .brand-card {
+//   padding: 10px;
+//   justify-content: center;
+//   background-color: #f5efe769;
+//   height: 200px;
+//   transition:
+//     background 0.3s,
+//     transform 0.3s,
+//     opacity 0.6s,
+//     box-shadow 0.3s;
+//   opacity: 0;
+//   transform: translateY(30px);
+// }
+
+// .brand-card.visible {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+// .brand-card:hover {
+//   background-color: #f5efe7a0;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//   transform: scale(1.1);
+// }
+
+// .brand-image {
+//   transform: translate(0, -10%);
+//   max-height: 100px;
+//   object-fit: contain;
+//   margin-bottom: 10px;
+// }
+
+// .brand-name {
+//   position: absolute;
+//   align-self: center;
+//   bottom: 10px;
+//   font-size: 1.1rem;
+//   text-align: center;
+// }
+
+// .brand-link {
+//   text-decoration: none;
+//   color: inherit;
+//   display: inline-block;
+// }
 
 // ProjectsSection
 .projects-section {
