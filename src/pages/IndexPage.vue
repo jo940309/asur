@@ -64,6 +64,7 @@ onMounted(() => {
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
+  activeSection.value = id;
   if (el) {
     // 僅在未完全進入視口時才滾動
     const rect = el.getBoundingClientRect();
