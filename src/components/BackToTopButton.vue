@@ -1,5 +1,5 @@
 <template>
-  <div class="back-to-top" v-show="visible" @click="scrollToTop">
+  <div class="back-to-top" v-show="visible" @click="handleClick">
     <div class="back-to-top-button">
       <div class="back-to-top-icon">&#9650;</div>
       <div class="back-to-top-text">TOP</div>
@@ -10,14 +10,23 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const emit = defineEmits<{
+  (e: 'back-to-top'): void;
+}>();
+
 const visible = ref(false);
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+function handleClick() {
+  // scrollToTop();
+  emit('back-to-top');
 }
+
+// function scrollToTop() {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: 'smooth',
+//   });
+// }
 
 function handleScroll() {
   visible.value = window.scrollY > 300;

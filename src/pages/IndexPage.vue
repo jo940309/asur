@@ -27,7 +27,7 @@
       </a>
     </div>
 
-    <BackToTopButton />
+    <BackToTopButton @back-to-top="scrollTo('company')" />
   </div>
 </template>
 
@@ -53,7 +53,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.6 },
+    { threshold: 0.1 },
   );
 
   navItems.forEach((item) => {
@@ -64,16 +64,24 @@ onMounted(() => {
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
-  activeSection.value = id;
-  if (el) {
-    // 僅在未完全進入視口時才滾動
-    const rect = el.getBoundingClientRect();
-    const isFullyVisible =
-      rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  if (!el) return;
 
-    if (!isFullyVisible) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  const observer = new IntersectionObserver(
+    (entries, observerInstance) => {
+      const entry = entries[0];
+      if (entry && entry.isIntersecting) {
+        activeSection.value = id;
+        observerInstance.disconnect();
+      }
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    },
+  );
+
+  observer.observe(el);
+
+  el.scrollIntoView({ behavior: 'smooth' });
 };
 </script>
