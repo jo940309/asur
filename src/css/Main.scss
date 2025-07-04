@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h4 {
-  font-weight: 500;
-}
-
 // Main layout styles
 .top-logo {
   display: flex;
@@ -86,6 +82,9 @@ h4 {
   z-index: 2;
   margin-top: 70px;
   top: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  // text-shadow: 1px 1px 2px #838383;
 }
 
 // CompanySection
@@ -171,6 +170,12 @@ svg {
   justify-content: center;
   background-color: #f5efe7;
   color: #3e5879;
+
+  padding-bottom: 80px;
+}
+
+.services-width {
+  width: 100%;
 }
 
 .bigSERVICES {
@@ -180,7 +185,56 @@ svg {
 
   position: absolute;
   z-index: 1;
-  transform: translate(20%, 0);
+  transform: translate(-30%, 0);
+}
+
+.serviceCard {
+  margin: 20px 0;
+  background-color: #cbdceb57;
+}
+
+.serviceCategory {
+  margin-top: 20px;
+}
+
+.serviceItem {
+  height: 150px;
+  margin: 20px;
+  padding: 30px 10px;
+  transition: transform 1s ease;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.slide-left-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-right-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 // BrandsSection
