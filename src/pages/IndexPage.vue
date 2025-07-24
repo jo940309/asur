@@ -1,5 +1,5 @@
 <template>
-  <div class="top-logo justify-center">
+  <div class="top-logo justify-start">
     <img src="../assets/asur/asurTitle.jpg" alt="ASUR" class="logo" />
   </div>
 
